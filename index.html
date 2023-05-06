@@ -66,6 +66,29 @@
     .date {
       float: right;
     } 
+@media screen and (max-width: 767px) {
+  .header__nav {
+    display: none;
+  }
+  
+  .header__toggle-nav {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header__toggle-nav {
+    display: none;
+  }
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -77,6 +100,7 @@
   left: 0;
   right: 0;
   z-index: 9999;
+  width: 100%;
 }
 
 .header__logo {
@@ -88,6 +112,7 @@
 .header__nav {
   display: flex;
   align-items: center;
+  margin-left: auto;
 }
 
 .header__nav__list {
@@ -96,7 +121,6 @@
   padding: 0;
   display: flex;
   justify-content: center;
-  margin-left: auto;
 }
 
 .header__nav__item {
@@ -112,6 +136,7 @@
   color: #333;
   font-weight: bold;
 }
+
 
       .gpa {
         font-weight: bold;
@@ -202,7 +227,7 @@
 <body>
     
 <header class="header">
-  <div class="header__logo">Nikhil Chowdary Gutlapalli</div>
+  <div class="header__logo">Nikhil</div>
   <nav class="header__nav">
     <ul class="header__nav__list">
       <li class="header__nav__item"><a href="#about-me" class="scroll-to">About Me</a></li>
@@ -214,7 +239,9 @@
       <li class="header__nav__item"><a href="#awards">Awards</a></li>
     </ul>
   </nav>
+  <button class="header__toggle-nav">Menu</button>
 </header>
+
 
     <div class="container">
         <div class="row" style="margin-top: 5em; ">
